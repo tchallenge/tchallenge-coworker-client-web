@@ -1,1 +1,2 @@
-# tchallenge-coworker-client-web
+# T-Challenge: Coworker Web Client
+Web client for T-Challenge co-workers
