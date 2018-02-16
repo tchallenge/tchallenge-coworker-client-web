@@ -1,19 +1,21 @@
 import {NgModule} from '@angular/core';
 
-import {AppComponent} from './app.component';
-import {AppSharedModule} from './common/app-common.module';
 import {AppLayoutComponent} from './layout/app-layout.component';
+import {AppRootComponent} from './app-root.component';
+import {AppRoutingModule} from './routing/app-routing.module';
+import {AppSharedModule} from './common/app-common.module';
 
 @NgModule({
     declarations: [
-        AppComponent,
-        AppLayoutComponent
+        AppLayoutComponent,
+        AppRootComponent
     ],
     imports: [
+        AppRoutingModule,
         AppSharedModule
     ],
     bootstrap: [
-        AppComponent
+        AppRootComponent
     ]
 })
 export class AppModule {
