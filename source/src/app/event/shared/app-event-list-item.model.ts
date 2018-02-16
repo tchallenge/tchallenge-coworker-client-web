@@ -1,4 +1,4 @@
-export class AppEventListItem {
+export class AppEventSearchResultItem {
 
     id: string;
     permalink: string;

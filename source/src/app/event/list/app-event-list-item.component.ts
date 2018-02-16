@@ -1,6 +1,6 @@
 import {Component, Input} from '@angular/core';
 
-import {AppEventListItem} from './app-event-list-item.model';
+import {AppEventSearchResultItem} from '../shared/app-event-list-item.model';
 
 @Component({
     selector: 'app-event-list-item',
@@ -9,5 +9,5 @@ import {AppEventListItem} from './app-event-list-item.model';
 })
 export class AppEventListItemComponent {
 
-    @Input() item: AppEventListItem;
+    @Input() item: AppEventSearchResultItem;
 }

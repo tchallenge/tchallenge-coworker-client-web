@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {AppEventListItem} from './app-event-list-item.model';
+import {AppEventSearchResultItem} from '../shared/app-event-list-item.model';
+import {AppEventService} from '../shared/app-event.service';
 
 @Component({
     selector: 'app-event-list',
@@ -8,19 +9,13 @@ import {AppEventListItem} from './app-event-list-item.model';
 })
 export class AppEventListComponent implements OnInit {
 
-    items: AppEventListItem[];
+    items: AppEventSearchResultItem[];
+
+    constructor(private appEventService: AppEventService) {
+
+    }
 
     ngOnInit(): void {
-        this.items = [
-            {
-                id: '1',
-                permalink: 'joker2018',
-                title: 'Joker 2018',
-                description: 'Крупнейшая ежегодная Java-конференция в России',
-                validFrom: '2018-01-01',
-                validUntil: '2019-01-01',
-                status: 'APPROVED'
-            }
-        ];
+        this.appEventService.search().subscribe(items => this.items = items);
     }
 }
