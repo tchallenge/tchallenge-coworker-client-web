@@ -1,12 +1,24 @@
 import {NgModule} from '@angular/core';
 import {ExtraOptions, RouterModule, Routes} from '@angular/router';
 
+import {AppEventRootComponent} from '../event/app-event-root.component';
 import {AppLayoutComponent} from '../layout/app-layout.component';
 
 const routes: Routes = [
     {
         path: '',
-        component: AppLayoutComponent
+        component: AppLayoutComponent,
+        children: [
+            {
+                path: 'events',
+                component: AppEventRootComponent
+            },
+            {
+                path: '',
+                redirectTo: 'events',
+                pathMatch: 'full'
+            }
+        ]
     },
     {
         path: '**',
