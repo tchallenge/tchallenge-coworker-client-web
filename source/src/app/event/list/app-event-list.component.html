@@ -1,0 +1,4 @@
+<div class="app-event-list">
+    <app-event-list-item *ngFor="let item of items" [item]="item"></app-event-list-item>
+    <span class="no-items-message" *ngIf="!items">События не найдены</span>
+</div>
