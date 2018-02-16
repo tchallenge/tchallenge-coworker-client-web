@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
 
-import {AppCommonModule} from '../common/app-common.module';
+import {AppCommonModule} from '../common';
 import {AppEventListComponent} from './list/app-event-list.component';
 import {AppEventListItemComponent} from './list/app-event-list-item.component';
 import {AppEventRootComponent} from './app-event-root.component';
