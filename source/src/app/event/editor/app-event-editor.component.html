@@ -1,0 +1,58 @@
+<div class="app-event-editor" *ngIf="event">
+
+    <mat-form-field class="full-length">
+        <input matInput
+               placeholder="ID"
+               [disabled]="true"
+               [(ngModel)]="event.id">
+    </mat-form-field>
+
+    <mat-form-field class="full-length">
+        <input matInput
+               placeholder="Название"
+               [(ngModel)]="event.caption">
+    </mat-form-field>
+
+    <mat-form-field class="full-length">
+        <input matInput
+               placeholder="Постоянная ссылка"
+               [(ngModel)]="event.permalink">
+    </mat-form-field>
+
+    <mat-form-field class="full-length">
+        <textarea matInput
+               placeholder="Описание"
+               [(ngModel)]="event.description">
+        </textarea>
+    </mat-form-field>
+
+    <mat-form-field class="full-length">
+        <mat-select placeholder="Уровни подготовки"
+                    [multiple]="true"
+                    [(value)]="event.maturities">
+            <mat-option *ngFor="let item of availableMaturities" [value]="item">{{item}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="full-length">
+        <mat-select placeholder="Специализации"
+                    [multiple]="true"
+                    [(value)]="event.specializations">
+            <mat-option *ngFor="let item of availableSpecializations" [value]="item">{{item}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput [matDatepicker]="validFrom" placeholder="Дата начала">
+        <mat-datepicker-toggle matSuffix [for]="validFrom"></mat-datepicker-toggle>
+        <mat-datepicker #validFrom></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput [matDatepicker]="validUntil" placeholder="Дата окончания">
+        <mat-datepicker-toggle matSuffix [for]="validUntil"></mat-datepicker-toggle>
+        <mat-datepicker #validUntil></mat-datepicker>
+    </mat-form-field>
+
+    <button mat-raised-button color="accent" (click)="onSave($event)">Сохранить</button>
+</div>

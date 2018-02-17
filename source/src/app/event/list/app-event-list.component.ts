@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {AppEventSearchResultItem} from '../shared/app-event-list-item.model';
+import {AppEventSearchResultItem} from '../shared/app-event-search-result-item.model';
 import {AppEventService} from '../shared/app-event.service';
 
 @Component({
@@ -16,6 +16,6 @@ export class AppEventListComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        this.appEventService.search().subscribe(items => this.items = items);
+        this.appEventService.retrieveSearchResult().subscribe(items => this.items = items);
     }
 }
