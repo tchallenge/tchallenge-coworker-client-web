@@ -4,10 +4,11 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {
-    MatButtonModule, MatCardModule, MatCheckboxModule, MatInputModule, MatOptionModule, MatRadioModule,
+    MatButtonModule, MatCardModule, MatCheckboxModule, MatDatepickerModule, MatInputModule, MatOptionModule, MatRadioModule,
     MatSelectModule
 } from '@angular/material';
 import {RouterModule} from '@angular/router';
+import {MatMomentDateModule} from '@angular/material-moment-adapter';
 
 @NgModule({
     imports: [
@@ -18,7 +19,9 @@ import {RouterModule} from '@angular/router';
         MatCardModule,
         MatButtonModule,
         MatCheckboxModule,
+        MatDatepickerModule,
         MatInputModule,
+        MatMomentDateModule,
         MatOptionModule,
         MatRadioModule,
         MatSelectModule,
@@ -32,7 +35,9 @@ import {RouterModule} from '@angular/router';
         MatCardModule,
         MatButtonModule,
         MatCheckboxModule,
+        MatDatepickerModule,
         MatInputModule,
+        MatMomentDateModule,
         MatOptionModule,
         MatRadioModule,
         MatSelectModule,
